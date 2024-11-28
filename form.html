@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <link rel="stylesheet" href="stylef.css">
+</head>
+<body>
+    <h1><center><u>Form Page:</u></center></h1>
+    <form action="#" method="POST">
+        <!-- Name Input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Gender Radio Buttons -->
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Other</label><br><br>
+
+        <!-- Interests Checkboxes -->
+        <label>Select Your Interests:</label><br>
+        <input type="checkbox" id="coding" name="interests" value="coding">
+        <label for="coding">Coding</label><br>
+        <input type="checkbox" id="sports" name="interests" value="sports">
+        <label for="sports">Sports</label><br>
+        <input type="checkbox" id="reading" name="interests" value="reading">
+        <label for="reading">Reading</label><br><br>
+
+        <!-- Date Input -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <!-- Range Input -->
+        <label for="experience">Experience (years):</label>
+        <input type="range" id="experience" name="experience" min="0" max="30" step="1">
+        <span id="range-value">15</span> years<br><br>
+
+        <!-- Select Dropdown -->
+        <label for="country">Select Your Country:</label>
+        <select id="country" name="country" required>
+            <option value="" disabled selected>Select</option>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Pakistan</option>
+            <option value="au">United Arab Emirates</option>
+        </select><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // JavaScript to display range value dynamically
+        const rangeInput = document.getElementById('experience');
+        const rangeValue = document.getElementById('range-value');
+        rangeInput.addEventListener('input', () => {
+            rangeValue.textContent = rangeInput.value;
+        });
+    </script>
+</body>
+</html>
+
